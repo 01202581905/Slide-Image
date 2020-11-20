@@ -19,6 +19,10 @@ function showSlide(n) {
         item.classList.remove('active-slide');
     });
     mySlides[n].classList.add('active-slide');
+    listDot.forEach(item => {
+        item.classList.remove('active-dotslide');
+    })
+    listDot[n].classList.add('active-dotslide');
 };
 prevBtn.addEventListener('click', function () {
     showSlide(--indexSlide);
